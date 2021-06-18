@@ -1,6 +1,6 @@
 # CorticalNeuropixelProcessingPipeline
 
-This is code and instructions for the manual adjustment of human Neuropixels recordings for the paper: "Large-scale recordings of individual neurons in human cortex  using high-density Neuropixels probes" by Paulk et al., preprint located at https://www.biorxiv.org/c.... (will change with the preprint submitted)
+This is code and instructions for the manual adjustment of human Neuropixels recordings for the paper: "Large-scale recordings of individual neurons in human cortex  using high-density Neuropixels probes" by Paulk et al., preprint located at .... (will change with the preprint submitted)
 
 The Export_STL_and_Load_CSV.m code is the export of Neuropixels LFP (local field potential) signals within a specific range of channels which show the movement-induced artifact most clearly (see below) from MATLAB to an STL file (top half of the Export_STL_and_Load_CSV.m code). A manual tracing step occurs in blender (https://www.blender.org/) due to the ease of use of the blender program versus other manual tracing aprpoaches.  Following manual tracing and checking the tracing follows the dips in voltage indicating a moving neural signal, the subsequent traced lines are then imported back into MATLAB from a .csv file and used to interpolate the LFP and AP (action potential) data across the recordings. 
 
