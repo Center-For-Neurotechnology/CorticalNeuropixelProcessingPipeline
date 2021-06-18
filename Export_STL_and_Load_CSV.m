@@ -37,16 +37,19 @@ stlwrite(fullfile(data_path,'LFPMatrix.stl'), fvc.faces, fvc.vertices)
 % as surface files into Blender (https://www.blender.org/)
 
 %%%%%%%%%%%%%%%
-%             %
-%             %
-%  Angelique  %
-%             %
-%             %
+% Importing the files into blender involves using the .stl Add-on (Import-Export: STL input) which 
+% generates a blender object plane of channel x time  with the peaks and valleys (topography) the voltage of the signal.
+% Within blender, to make the shifting sinks and peaks more visible, the short axis (channels) is expanded to 400 pixels 
+% without changing the long axis of the surface (which is in time). 
+% Then, based on the peaks and valleys of the distinctive LFP, we added a Stroke using GreasePencil to trace the movement artifact manually.
+% Once the entire recording was traced using this tool, we converted the Stroke into a Line then into an Object and used custom python code 
+% (exportingCSVinfoExample.py) to export the vertices of the traced Line into a .csv file
 %%%%%%%%%%%%%%%
-%%
+
+%% Load CSV 
 % Once the blender output (the traced lines) are exported into .csv files, 
 % below involves importing the .csv files back into matlab, 
-% splicing the traces togethr, and calibrating the curves to fit the channels.
+% splicing the traces together, and calibrating the curves to fit the channels.
 
 BLENDER_NORM_FACTOR = 0.07;
 
