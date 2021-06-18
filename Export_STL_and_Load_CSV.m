@@ -14,12 +14,12 @@ COLUMN = 2; % select one column neuropixel column to process (1:MAP).
 FS = 2500;
 DOWN_SAMPLE_FACTOR = 1; % change to 2,5 or 10 if output stl is too big
 
-data_path = {'enter data path'};                      % 'D:\Neuropixel\NeuropixelMG29\test5fffdfc_g0\test5fffdfc_g0_imec0\';
-data_file = {'name of lf.bin file'};                  % 'test5fffdfc_g0_t0.imec0.lf.bin';
+data_path = ['enter data path'];                      % 'D:\Neuropixel\NeuropixelMG29\test5fffdfc_g0\test5fffdfc_g0_imec0\';
+data_file = ['name of lf.bin file'];                  % 'test5fffdfc_g0_t0.imec0.lf.bin';
 
 % select time range to load and export (in seconds):
-START_TIME = {'enter start time here'} / FS;            %4.45e5 / FS;
-END_TIME = {'enter end time here'};                     % 8.498e5 / FS;
+START_TIME = ['enter start time here'] / FS;            %4.45e5 / FS;
+END_TIME = ['enter end time here'];                     % 8.498e5 / FS;
 
 %% load data from bin and export to STL: 
 data_file = fullfile(data_path,data_file);
@@ -54,8 +54,8 @@ stlwrite(fullfile(data_path,'LFPMatrix.stl'), fvc.faces, fvc.vertices)
 BLENDER_NORM_FACTOR = 0.07;
 
 %% Load CSV file back:
-data_path = {'enter data path'};  
-csv_file = {'name of lf.bin file'};  
+data_path = ['enter data path'];  
+csv_file = ['name of lf.bin file'];  
 % csv_file = 'IntraopMG29Range2Part4.csv';
 
 data_file = fullfile(data_path,data_file);
