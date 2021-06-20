@@ -12,8 +12,10 @@ channels = 1:384;
 
 
 %% Export to STL file:
+MAP = 2;    % should be either 2 or 4
+column = 2; % select one neuropixel column to process (1:MAP). 
 
-stl_file = Export_STL(lfp_data_file, START_TIME, END_TIME);
+stl_file = Export_STL(lfp_data_file, START_TIME, END_TIME, MAP, column);
 disp (['load stl file: ',stl_file,' to Blender as surface']);
 
 %% Manual step in In Blender : 

@@ -10,7 +10,7 @@ MAP = 2;    % should be either 2 or 4
 COLUMN = 2; % select one column neuropixel column to process (1:MAP). 
 
 FS = 2500;
-DOWN_SAMPLE_FACTOR = 1; % change to 2,5 or 10 if output stl is too big
+DOWN_SAMPLE_FACTOR = 1; % change to 2,5 or 10 if output stl is too big (should be similar values as in Export_STL.m)
 
 [data_path,binName,ext] = fileparts(data_file);
 
