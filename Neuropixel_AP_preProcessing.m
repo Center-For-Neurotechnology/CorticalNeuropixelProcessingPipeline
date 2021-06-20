@@ -1,7 +1,7 @@
 function []=Neuropixel_AP_preProcessing(name, data_file, channels, start_point, end_point)
 % input:
 %     name:         string, name of subject
-%     data_file:    path to ap.bin file
+%     data_file:    full path to ap.bin file
 %     channels:     a vector with all channels to include (1:384)
 %     start_point:  start point in seconds
 %     end_point:    end point in seconds
@@ -58,16 +58,14 @@ end
 
 num_of_channels = length(channels);
 
-if save_as_bin
-    output_bin = 
-fid = fopen([output_folder, binName ,'.bin'],'w');
+fid = fopen([output_folder, binName ,'_',num2str(start_point),'.bin'],'w');
 for t = 1:size(data,2)
     fwrite(fid,int16(data(channels,t)),'int16');
 end
 fclose(fid)
 
-save([output_folder, binName ,'.mat'], 'meta', 'med','norm_factor','num_of_channels')
-% save([output_folder, binName ,'.mat'], 'data','meta','med','norm_factor','num_of_channels','-v7.3');
+save([output_folder, binName ,'_',num2str(start_point),'.mat'], 'meta', 'med','norm_factor','num_of_channels', 'start_point', 'end_point')
+% save([output_folder, binName ,'_',num2str(start_point),'.mat'], 'data','meta','med','norm_factor','num_of_channels','-v7.3');
 
 disp('Done!');
 end

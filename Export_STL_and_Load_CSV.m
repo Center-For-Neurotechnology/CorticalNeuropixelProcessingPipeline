@@ -8,7 +8,7 @@
 clear all
 addpath(fullfile(pwd,'util'))
 
-MAP = 4;    % should be either 2 or 4
+MAP = 2;    % should be either 2 or 4
 COLUMN = 2; % select one column neuropixel column to process (1:MAP). 
 
 FS = 2500;
