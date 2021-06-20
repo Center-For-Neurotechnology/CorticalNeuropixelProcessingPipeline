@@ -1,4 +1,4 @@
-function []=Export_STL(data_file, START_TIME, END_TIME)
+function [stl_file]=Export_STL(data_file, START_TIME, END_TIME)
 %   STL to Blender:
 %
 %   This script will load LFP data from SpikeGLX bin file and export it as stl file for manual annotation
@@ -25,6 +25,7 @@ time_range=1:DOWN_SAMPLE_FACTOR:length(LFPMatrix);
 
 Z = (LFPMatrix(COLUMN:MAP:(384),time_range));
 fvc = surf2patch(Z,'triangles') ;
-stlwrite(fullfile(data_path,'LFPMatrix.stl'), fvc.faces, fvc.vertices)
+stl_file = fullfile(data_path,'LFPMatrix.stl');
+stlwrite(stl_file, fvc.faces, fvc.vertices)
 
 
