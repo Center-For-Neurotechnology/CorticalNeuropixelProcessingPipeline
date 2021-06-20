@@ -89,7 +89,7 @@ for t = 1:length(distortion)
 end
 
 median_distortion = round(median(distortion)) *2;
-output_file = [output_folder, binName ,'_',num2str(start_point),'To_kilosort.bin'];
+output_file = [output_folder, binName ,'_To_kilosort.bin'];
 fid = fopen(output_file,'w');
 for t = 1:size(new_data,2)
     to_write = (new_data((1:384) + median_distortion,t)');
@@ -97,7 +97,7 @@ for t = 1:size(new_data,2)
     end
 fclose(fid)
 
-save([output_folder, binName ,'_',num2str(start_point),'.mat'], 'meta', 'median_distortion', 'start_point', 'end_point')
+save([output_folder, binName ,'_To_kilosort','.mat'], 'meta', 'median_distortion', 'start_point', 'end_point')
 % save([output_folder, binName ,'_',num2str(start_point),'.mat'], 'data','meta','med','norm_factor','num_of_channels','-v7.3');
 disp('Done!')
 

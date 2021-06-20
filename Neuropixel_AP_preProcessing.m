@@ -10,6 +10,7 @@ function [output_file]=Neuropixel_AP_preProcessing(name, data_file, channels, st
 % a mat file
 
 % preferably use only stabe time
+% steps:
 % dtrend each channel
 % remove median values between channels.
 % normalize channel by auto-covariance of data without outliers.
