@@ -17,7 +17,7 @@ addpath(fullfile(pwd,'util'))
 % column = 2; % select one column neuropixel column to process (1:MAP). 
 
 FS = 2500;
-DOWN_SAMPLE_FACTOR = 1; % change to 2,5 or 10 if output stl is too big (should be similar values as in Load_CSV_from_blender.m)
+DOWN_SAMPLE_FACTOR = 5; % change to 2,5 or 10 if output stl is too big (should be similar values as in Load_CSV_from_blender.m)
 
 
 %% load data from bin and export to STL: 
@@ -27,7 +27,7 @@ time_range=1:DOWN_SAMPLE_FACTOR:length(LFPMatrix);
 
 Z = (LFPMatrix(column:map:(384),time_range));
 fvc = surf2patch(Z,'triangles') ;
-stl_file = fullfile(data_path,'LFPMatrix.stl');
+stl_file = fullfile(fileparts(data_file),'LFPMatrix.stl');
 stlwrite(stl_file, fvc.faces, fvc.vertices)
 
 

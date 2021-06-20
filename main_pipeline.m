@@ -36,8 +36,8 @@ disp (['load stl file: ',stl_file,' to Blender as surface']);
 % loaded back into matlab
 %%%%%%%%%%%%%%%
 %% Load data from CSV back to matlab:
-
-[BlenderCurves_file] = Load_CSV_from_blender(lfp_data_file, START_TIME, END_TIME);
+csv_file = '{your data path}\blender_output.csv';
+[BlenderCurves_file] = Load_CSV_from_blender(csv_file, lfp_data_file, START_TIME, END_TIME);
 
 %% AP normalization:
 start_point = 100;  % Seconds, take the stable recording time for further analysis 
