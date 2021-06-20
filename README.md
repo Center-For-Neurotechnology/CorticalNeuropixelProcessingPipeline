@@ -25,7 +25,7 @@ This section was to export the LFP into .stl files which can be imported as surf
 3. Then, based on the peaks and valleys of the distinctive LFP, we added a Stroke using GreasePencil to trace the movement artifact manually.
 4. Once the entire recording was traced using this tool, we converted the traced Stroke into a Line then into an Object and used custom python code (exportingCSVinfoExample.py) to export the vertices of the traced Line into a .csv file
 
-Import of the traced lines into MATLAB is in the main_pipeline.m code from lines 38 onward (beginning with the line "Load CSV ".
+Import of the traced lines into MATLAB is in the main_pipeline.m code from lines 38 onward, using the Load_CSV_from_blender.m script.
 
 This traced information then can be used to interpolate the voltage across channels to then adjust for the movement artifact through time for both the LFP and AP channels.
 
