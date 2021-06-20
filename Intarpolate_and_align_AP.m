@@ -97,7 +97,7 @@ for t = 1:size(new_data,2)
     end
 fclose(fid)
 
-save([output_folder, binName ,'_To_kilosort','.mat'], 'meta', 'median_distortion', 'start_point', 'end_point')
+save([output_folder, binName ,'_To_kilosort','.mat'], 'median_distortion', 'start_point', 'end_point')
 % save([output_folder, binName ,'_',num2str(start_point),'.mat'], 'data','meta','med','norm_factor','num_of_channels','-v7.3');
 disp('Done!')
 
