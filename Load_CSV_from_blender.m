@@ -26,7 +26,7 @@ Z = (LFPMatrix(COLUMN:MAP:(384),time_range));
 A=importdata(csv_file);
 B = sortrows(A,1);
 
-BlenderCurveX = 0 + START_TIME + B(:,1) * DOWN_SAMPLE_FACTOR;
+BlenderCurveX = (0 + START_TIME + B(:,1) * DOWN_SAMPLE_FACTOR);
 BlenderCurveY = BLENDER_NORM_FACTOR * abs(-B(:,2)) - 0;               
 
 AssociatedFileDirectory=data_file;

@@ -29,7 +29,7 @@ if ~exist(output_folder,'dir')
 end
 
 
-points(:,1) = BlenderCurveX * LFP_FS;
+points(:,1) = BlenderCurveX;% * LFP_FS;
 points(:,2) = BlenderCurveY;
 
 % remove duplicate points if exist:
