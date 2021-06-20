@@ -1,4 +1,4 @@
-function [] = Intarpolate_and_align_AP(name, data_file, Blender_file, channels, start_point, end_point)
+function [output_file] = Intarpolate_and_align_AP(name, data_file, Blender_file, channels, start_point, end_point)
 
 % input:
 %     name:         string, name of subject
@@ -89,8 +89,8 @@ for t = 1:length(distortion)
 end
 
 median_distortion = round(median(distortion)) *2;
-
-fid = fopen([output_folder, binName ,'_',num2str(start_point),'To_kilosort.bin'],'w');
+output_file = [output_folder, binName ,'_',num2str(start_point),'To_kilosort.bin'];
+fid = fopen(output_file,'w');
 for t = 1:size(new_data,2)
     to_write = (new_data((1:384) + median_distortion,t)');
     fwrite( fid, int16(to_write), 'int16' );
