@@ -13,7 +13,7 @@ The code used for the processing is laid out in a main, single MATLAB file "main
 6. Intarpolate_and_align_AP.m - script interpolation of the AP band step- the output from this step can be put into Kilosort 3.0
 7. Kilosort 3.0 (https://github.com/MouseLand/Kilosort) to spike sort the manually realigned data without additional registration by Kilosort 3.0.
 8. PHY2 for the identification of MUA versus single unit activity (https://github.com/cortex-lab/phy)
-9. extract_waveform_with_metrics.py - takes the output from Kilosort and extracts the waveforms and the performs a series of measurements on the output waveforms which can be read into MATLAB, closely following the code from (https://github.com/AllenInstitute/ecephys_spike_sorting/tree/master/ecephys_spike_sorting/modules/mean_waveforms)Source: Jia et al. (2019) "High-density extracellular probes reveal dendritic backpropagation and facilitate neuron classification." J Neurophys 121: 1831-1847
+9. extract_waveform_with_metrics.py - takes the output from Kilosort and extracts the waveforms and the performs a series of measurements on the output waveforms which can be read into MATLAB, closely following the code from ( https://github.com/AllenInstitute/ecephys_spike_sorting/tree/master/ecephys_spike_sorting/modules/mean_waveforms ) Source: Jia et al. (2019) "High-density extracellular probes reveal dendritic backpropagation and facilitate neuron classification." J Neurophys 121: 1831-1847
 
 ![](images/interpexample.png)
 
