@@ -31,3 +31,6 @@ This traced information then can be used to interpolate the voltage across chann
 
 ![](images/interpresult.png)
 
+# Licensing :
+SpikeGLX components are subject to Janelia Research Campus Software Copyright 1.2 license terms: http://license.janelia.org/license.
+waveform_metrics component is subject to Allen Institute Terms of Use https://alleninstitute.org/legal/terms-use/
